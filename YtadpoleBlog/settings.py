@@ -28,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -119,4 +120,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
+#STATIC_URL = '/static/'
+
+SITE_ROOT = os.path.join(os.path.abspath(os.path.dirname(__file__)), '..')
+STATIC_ROOT = os.path.join(SITE_ROOT, 'static')
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    ("css", os.path.join(STATIC_ROOT, 'css')),
+    ("js", os.path.join(STATIC_ROOT, 'js')),
+    ("font", os.path.join(STATIC_ROOT, 'font')),
+#("images", os.path.join(STATIC_ROOT, 'images')),
+#("bower_components", os.path.join(STATIC_ROOT, 'bower_components')),
+)
