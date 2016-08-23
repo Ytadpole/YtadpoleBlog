@@ -33,3 +33,6 @@ def get_detail(request , blog_id):
         'form':form
     }
     return render(request,'blog_detail.html', ctx)
+
+def aboutMe(request):
+    return render(request, "about.html")
