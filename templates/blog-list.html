@@ -41,6 +41,8 @@
 {% extends "base.html" %}
 {% block article %}
         {% for blog in blogs %}
+        <div class="panel panel-default">
+        <div class="panel-body">
 	        <h3>
 	            <a href="{% url 'blog_get_detail' blog.id %}"><h2>{{ blog.title }}</h2></a>
 	        </h3>
@@ -52,6 +54,8 @@
 	            	作者：<span class="author text-right" >{{ blog.author }}</span>
 	            <span class="created" style="color: #6aa84f">{{ blog.created|date:"Y-m-d H:i" }}</span>
 	        </div>
+	    </div>
+        </div>
 		{% endfor %}
 {% endblock %}
 {#    <div class="container">#}

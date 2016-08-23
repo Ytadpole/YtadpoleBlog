@@ -46,19 +46,16 @@
         <div class="container">
             {% block content %}
                         <div class="col-md-9">
-                            <div class="panel panel-default">
-                                <div class="panel-body">
-                                    {% block article %}
-                                        {% block article_title %}
-
-                                        {% endblock %}
+                            {% block article %}
+                                <div class="panel panel-default">
+                                	<div class="panel-body">
+                                        {% block article_title %}{% endblock %}
                                         {% block article_content %}{% endblock %}
-                                    {% endblock %}
-
-                                    {% block article_menu %}{% endblock %}
-                                    {% block article_comments %}{% endblock %}
-                                </div>
-                            </div>
+	                                    {% block article_menu %}{% endblock %}
+	                                    {% block article_comments %}{% endblock %}
+                                	</div>
+                            	</div>
+                            {% endblock %}
                         </div>
                         <div class="col-md-3">
                             <div class="pin">
